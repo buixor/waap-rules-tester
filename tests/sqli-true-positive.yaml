@@ -1,0 +1,6 @@
+# a test suite is a name and a list of nuclei templates that are supposed to match
+name: sqli-true-positive
+nuclei_templates: 
+ - ./nuclei/simple-sqli-GET.yaml
+ - ./nuclei/simple-sqli-POST.yaml
+failure_severity: critical

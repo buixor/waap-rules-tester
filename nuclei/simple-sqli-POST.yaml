@@ -1,0 +1,25 @@
+id: simple-sqli-post
+
+info:
+  name: simple-sqli
+  author: crowdsec
+  severity: medium
+  description: |
+    simple-sqli testing
+  tags: waap-testing
+
+http:
+  - raw:
+      - |
+        POST /test-sqli-post HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/x-www-form-urlencoded
+
+        search=foobar'+OR+'1'='1
+
+    cookie-reuse: true
+    matchers:
+      - type: status
+        status:
+          - 200
+          - 404

@@ -1,0 +1,5 @@
+# an example of test suite that will not just fail, but trigger nuclei errors
+name: sqli-true-positive
+nuclei_templates: 
+ - ./nuclei/simple-sqli-bad.yaml
+failure_severity: critical

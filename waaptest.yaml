@@ -1,0 +1,10 @@
+log_level: debug
+target: http://127.0.0.1:80/
+nuclei_config:
+  path: ~/go/bin/nuclei
+  options:
+    - "-ev" #allow variables from environment
+    - "-nc" #no colors in output
+    - "-dresp" #dump response
+    - "-j" #use json output
+    
